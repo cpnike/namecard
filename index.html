@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f5">
+  <meta name="description" content="段奕臣 Yi-Chen Duan｜臺北醫學大學醫學系">
+  <title>段奕臣 Yi-Chen Duan｜Academic Profile</title>
+  <style>
+    :root {
+      --paper: #f7f7f5; --ink: #171817; --muted: #777b77;
+      --line: #dedfda; --accent: #263f60; --white: #fff;
+      --serif: Georgia, "Times New Roman", "Noto Serif TC", serif;
+      --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+    header { height: 76px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    .brand { font-size: 12px; letter-spacing: .16em; font-weight: 650; }
+    nav { display: flex; gap: 25px; color: var(--muted); font-size: 11px; letter-spacing: .12em; }
+    .hero { display: grid; grid-template-columns: 1.04fr .96fr; gap: clamp(36px, 7vw, 100px); align-items: center; padding: 76px 0 82px; }
+    .eyebrow { color: var(--accent); font-size: 10px; letter-spacing: .2em; font-weight: 700; text-transform: uppercase; }
+    h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(48px, 7vw, 82px); line-height: 1.12; letter-spacing: .04em; margin: 18px 0 7px; }
+    .english { font-family: var(--serif); color: #666b68; font-size: clamp(20px, 2.3vw, 27px); letter-spacing: .025em; }
+    .role { margin: 30px 0 5px; font-size: 14px; font-weight: 600; }
+    .school { color: var(--muted); font-size: 13px; }
+    .intro { color: #666b68; font-size: 13px; max-width: 410px; margin: 24px 0 28px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--ink); padding: 11px 17px; min-height: 43px; font-size: 11px; letter-spacing: .06em; transition: .2s ease; }
+    .btn.primary { background: var(--ink); color: white; }
+    .btn:hover { background: var(--accent); border-color: var(--accent); color: white; }
+    .portrait { position: relative; }
+    .portrait img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 28%; filter: saturate(.88); }
+    .portrait:after { content: "MEDICINE · MOVEMENT · TEAMWORK"; position: absolute; bottom: -12px; right: -13px; background: var(--paper); padding: 9px 12px; font-size: 9px; letter-spacing: .14em; color: var(--muted); }
+    section { border-top: 1px solid var(--line); padding: 54px 0 58px; }
+    .section-head { display: grid; grid-template-columns: 190px 1fr; gap: 35px; margin-bottom: 28px; }
+    .section-label { font-size: 10px; letter-spacing: .18em; color: var(--accent); font-weight: 700; }
+    h2 { font-family: var(--serif); font-weight: 500; font-size: 29px; margin: -7px 0 0; }
+    .section-note { color: var(--muted); font-size: 12px; margin-top: 7px; }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 45px; margin-left: 225px; }
+    .info-item { border-top: 1px solid var(--line); padding: 17px 0 18px; }
+    .meta { color: var(--muted); font-size: 9px; letter-spacing: .15em; margin-bottom: 5px; }
+    .value { font-size: 14px; font-weight: 550; }
+    .subvalue { color: var(--muted); font-size: 11px; margin-top: 3px; }
+    .achievement-list { margin-left: 225px; }
+    .achievement { display: grid; grid-template-columns: 78px 1fr auto; align-items: center; gap: 18px; border-top: 1px solid var(--line); padding: 18px 0; }
+    .year { font-family: var(--serif); color: var(--accent); font-size: 21px; }
+    .award-title { font-size: 14px; font-weight: 550; }
+    .award-sub { color: var(--muted); font-size: 11px; }
+    .award-tag { font-size: 9px; letter-spacing: .12em; color: var(--accent); border: 1px solid #c8d0d9; padding: 5px 8px; white-space: nowrap; }
+    .contact-grid { margin-left: 225px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .contact-card { border: 1px solid var(--line); padding: 18px; min-width: 0; }
+    .contact-card .value { overflow-wrap: anywhere; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0 35px; display: flex; justify-content: space-between; color: var(--muted); font-size: 10px; letter-spacing: .08em; }
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 36px, 520px); }
+      header { height: 64px; } nav { gap: 12px; font-size: 9px; }
+      .hero { grid-template-columns: 1fr; padding: 48px 0 58px; gap: 35px; }
+      .hero-copy { order: 1; } .portrait { order: 0; width: min(78%, 350px); margin: 0 auto; }
+      h1 { font-size: 58px; }
+      .section-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 20px; }
+      .info-grid, .achievement-list, .contact-grid { margin-left: 0; }
+      .info-grid { grid-template-columns: 1fr; }
+      .achievement { grid-template-columns: 58px 1fr; gap: 12px; }
+      .award-tag { grid-column: 2; justify-self: start; margin-top: -7px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      footer { gap: 12px; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top">YC / PERSONAL PROFILE</a>
+      <nav aria-label="主要導覽">
+        <a href="#profile">PROFILE</a><a href="#experience">EXPERIENCE</a><a href="#activities">ACTIVITIES</a><a href="#contact">CONTACT</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <div class="hero" id="profile">
+        <div class="hero-copy">
+          <div class="eyebrow">Academic Profile · 個人名片</div>
+          <h1>段奕臣</h1>
+          <div class="english">Yi-Chen Duan</div>
+          <div class="role">醫學生 · Medical Student</div>
+          <div class="school">臺北醫學大學｜醫學系</div>
+          <p class="intro">以醫學為專業養成的起點，也在舞蹈與運動中持續探索。重視專業、團隊合作，以及每一次學習與突破的機會。</p>
+          <div class="actions">
+            <a class="btn primary" href="mailto:B101111031@tmu.edu.tw">寄送電子郵件 ↗</a>
+            <a class="btn" href="tel:+886958789131">撥打電話 ↗</a>
+            <a class="btn" href="contact.vcf" download>儲存聯絡人 ↓</a>
+          </div>
+        </div>
+        <div class="portrait">
+          <img src="assets/profile.jpg" alt="段奕臣個人形象照">
+        </div>
+      </div>
+
+      <section id="experience">
+        <div class="section-head">
+          <div class="section-label">01 / EDUCATION & CLINICAL</div>
+          <div><h2>學習與臨床經歷</h2><div class="section-note">Education · Clinical Experience</div></div>
+        </div>
+        <div class="info-grid">
+          <div class="info-item"><div class="meta">EDUCATION</div><div class="value">臺北醫學大學 醫學系</div><div class="subvalue">Taipei Medical University · School of Medicine</div></div>
+          <div class="info-item"><div class="meta">CLINICAL EXPERIENCE</div><div class="value">衛生福利部雙和醫院</div><div class="subvalue">Clerk 1</div></div>
+        </div>
+      </section>
+
+      <section id="activities">
+        <div class="section-head">
+          <div class="section-label">02 / ACTIVITIES</div>
+          <div><h2>社團與運動</h2><div class="section-note">Dance · Sports · Teamwork</div></div>
+        </div>
+        <div class="info-grid">
+          <div class="info-item"><div class="meta">DANCE</div><div class="value">北醫熱舞社 Popping 組</div><div class="subvalue">第 23 屆</div></div>
+          <div class="info-item"><div class="meta">VOLLEYBALL</div><div class="value">排球校隊</div><div class="subvalue">TMU Volleyball Team</div></div>
+        </div>
+      </section>
+
+      <section id="achievements">
+        <div class="section-head">
+          <div class="section-label">03 / ACHIEVEMENTS</div>
+          <div><h2>競賽成果</h2><div class="section-note">Competition Highlights</div></div>
+        </div>
+        <div class="achievement-list">
+          <div class="achievement"><div class="year">2026</div><div><div class="award-title">大醫盃排球</div><div class="award-sub">Medical Cup · Volleyball</div></div><div class="award-tag">3RD PLACE</div></div>
+          <div class="achievement"><div class="year">2024</div><div><div class="award-title">大醫盃籃球</div><div class="award-sub">Medical Cup · Basketball</div></div><div class="award-tag">CHAMPION</div></div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-head">
+          <div class="section-label">04 / CONTACT</div>
+          <div><h2>聯絡資訊</h2><div class="section-note">Feel free to get in touch.</div></div>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:B101111031@tmu.edu.tw"><div class="meta">EMAIL</div><div class="value">B101111031@tmu.edu.tw</div></a>
+          <a class="contact-card" href="tel:+886958789131"><div class="meta">PHONE</div><div class="value">0958-789-131</div></a>
+        </div>
+      </section>
+    </main>
+    <footer><span>段奕臣 · Yi-Chen Duan</span><span>CONNECT · DISCOVER · COLLABORATE</span></footer>
+  </div>
+</body>
+</html>
